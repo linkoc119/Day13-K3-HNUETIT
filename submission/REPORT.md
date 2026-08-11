@@ -6,10 +6,15 @@
 - Repository URL:
 - Commit SHA cuối:
 - Thành viên và vai trò:
+  - **Thành viên A (API & Middleware)**: CP1 Middleware, gán Correlation ID, bổ sung exception handler.
+  - **Thành viên B (Security Engineer)**: CP1 PII Scrubbing, regex patterns & kiểm chứng log che PII.
+  - **Thành viên C (Metrics & Dashboard)**: CP1/CP2 đo đếm error_rate_pct & thiết kế spec Dashboard 6 nhóm chỉ số.
+  - **Thành viên D (SRE & Alerts Engineer)**: CP2 Thiết lập SLO, viết Alert rules & Alert Runbook xử lý sự cố.
+  - **Thành viên E (QA & Chief Investigator)**: Chạy load test, bọc trace cho sub-component RAG/LLM, dẫn dắt điều tra Challenge (CP3) & hoàn thiện báo cáo.
 
 ## 2. Kết quả kỹ thuật
 
-- Điểm `validate_logs.py`:
+- Điểm `validate_logs.py`: **30/100** *(Baseline CP0)*
 - Tổng số traces:
 - Số PII leak còn lại:
 - Link/đường dẫn dashboard:
@@ -50,6 +55,10 @@
 
 Với mỗi thành viên, ghi rõ nhiệm vụ và link commit/PR tương ứng.
 
-| Thành viên | Phần việc | Commit/PR | Điều đã học |
-|---|---|---|---|
-| | | | |
+| Thành viên | Vai trò | Phần việc chính | Commit/PR | Điều đã học |
+|---|---|---|---|---|
+| **Thành viên A** | API & Middleware | CP1 Middleware, gán Correlation ID, bổ sung exception handler | | |
+| **Thành viên B** | Security Engineer | CP1 PII Scrubbing, regex patterns và kiểm chứng log không lộ PII | | |
+| **Thành viên C** | Metrics & Dashboard | CP1/CP2 đo đếm error_rate_pct và thiết kế spec Dashboard 6 nhóm chỉ số | | |
+| **Thành viên D** | SRE & Alerts Engineer | CP2 Thiết lập SLO, viết Alerts rules và Alert Runbook xử lý sự cố | | |
+| **Thành viên E** | QA & Chief Investigator | Chạy load test, bọc trace sub-component RAG/LLM, dẫn dắt điều tra Challenge (CP3) & hoàn thiện báo cáo nhóm | | |
