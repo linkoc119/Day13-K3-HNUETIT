@@ -48,5 +48,10 @@ def snapshot() -> dict:
         "tokens_in_total": sum(REQUEST_TOKENS_IN),
         "tokens_out_total": sum(REQUEST_TOKENS_OUT),
         "error_breakdown": dict(ERRORS),
+        "error_rate_pct": (
+            round(sum(ERRORS.values()) / (TRAFFIC + sum(ERRORS.values())) * 100, 2)
+            if (TRAFFIC + sum(ERRORS.values()))
+            else 0.0
+        ),
         "quality_avg": round(mean(QUALITY_SCORES), 4) if QUALITY_SCORES else 0.0,
     }
